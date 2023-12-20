@@ -79,11 +79,34 @@ $table_prefix = 'wp_';
  *
  * @link https://wordpress.org/documentation/article/debugging-in-wordpress/
  */
+
+
+
+/* Add any custom values between this line and the "stop editing" line. */
+
 define( 'WP_DEBUG', false );
 
 /* Add any custom values between this line and the "stop editing" line. */
 
+// ... autres configurations ...
+
+
+
+/* Add any custom values between this line and the "stop editing" line. */
+
 define('WPLANG', 'fr_FR');
+
+// Changement de la méthode FTP
+define('FS_METHOD', 'direct');
+
+
+/* That's all, stop editing! Happy publishing. */
+
+// ... autres configurations ...
+
+
+/* That's all, stop editing! Happy publishing. */
+
 
 
 /* That's all, stop editing! Happy publishing. */
