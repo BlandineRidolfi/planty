@@ -4,3 +4,79 @@ body * {
     font-family: 'Syne';
 }
 
+nav {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    align-items: center;
+    padding-right: 60px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+nav a:hover {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+#site-title {
+    display: none;
+}
+
+.header {
+    display: none;
+}
+
+header {
+    background-color: white;
+    width: auto;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link-logo {
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 37px;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+}
+
+#nav-button {
+    flex-direction: flex;
+    align-items: center;
+    width: 236px;
+    height: 80px;
+    border-radius: 0;
+    background-color: #DC9F96;   
+}
+
+#nav-button:hover {
+    background-color: #C02E44;
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 60px;
+    padding: 20px 0 21px 0;
+    background-color: white;
+}
+
+
+/** 
+#copyright {
+    display: none;
+} 
+**/
+
