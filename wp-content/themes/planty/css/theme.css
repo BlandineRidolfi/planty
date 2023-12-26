@@ -73,10 +73,53 @@ footer {
     background-color: white;
 }
 
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 383px;
+    color: black;
+    font-size: 20px;
+    font-weight: 400
+}
 
-/** 
-#copyright {
-    display: none;
-} 
-**/
+.label-form {
+    margin-top: 22px;
+    margin-bottom: 13px;
+}
+
+.contact-form input {
+    border: none;
+    border-radius: 7px;
+    width: 383px;
+    height: 71px;
+}
+
+textarea {
+    border: none;
+    border-radius: 7px;
+    width: 383px;
+    height: 237px;
+}
+
+.cta {
+    margin-top: 24px;
+    margin-bottom: 42px;
+    padding-bottom: 30px;
+}
+
+.submit-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.submit-form input {
+    display: flex;
+    width: 198px;
+    height: 55px;
+    padding: 9px 0px;
+    justify-content: center;
+    align-items: center;
+}
 
