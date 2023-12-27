@@ -4,6 +4,8 @@ body * {
     font-family: 'Syne';
 }
 
+/**HEADER**/
+
 nav {
     display: flex;
     flex-direction: row;
@@ -23,6 +25,7 @@ nav a:hover {
 #site-title {
     display: none;
 }
+
 
 .header {
     display: none;
@@ -63,6 +66,8 @@ header {
     cursor: pointer;
 }
 
+/**FOOTER**/
+
 footer {
     display: flex;
     justify-content: center;
@@ -72,6 +77,8 @@ footer {
     padding: 20px 0 21px 0;
     background-color: white;
 }
+
+/**FORMULAIRE DE CONTACT **/
 
 .contact-form {
     display: flex;
@@ -123,3 +130,111 @@ textarea {
     align-items: center;
 }
 
+/* FORMULAIRE DE COMMANDE */
+
+.command {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 860px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.title-form {
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 40px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 860px;
+    margin-top: 39px;
+    gap: 26px; 
+}
+
+.container-command {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ajout pour centrer horizontalement */
+    text-align: center; /* Ajout pour centrer le texte horizontalement */
+    width: 194px;   
+    margin-bottom: 39px;
+  }
+
+  .textbox {
+    margin-top: 10px; /* Ajout pour espacer l'image et l'input */
+    
+  }
+
+  .textbox input {
+    width: 39px; /* Modification pour utiliser la largeur complète du conteneur parent */
+    height: 56px;
+    text-align: center;
+    font-family: inter;
+    font-size: 16px;
+    font-weight: 400;
+    box-sizing: border-box; /* Ajout pour inclure la bordure et le padding dans la largeur */
+  }
+
+  /* Partie formulaire*/
+  
+  .info-container {
+    display: flex;
+    justify-content: space-between;
+    width: 860px;
+    margin-top: 20px;
+    background: #3B8E46;
+    position: relative;
+  }
+  
+  .column {
+    flex: 1;
+    margin-right: 89px;
+    position: relative;
+  }
+  
+  .column:last-child {
+    margin-right: 0;
+  }
+  
+  .info-container::before {
+    content: "";
+    position: absolute;
+    top: 53px; /* Ajustez cette valeur pour l'aligner avec le titre "Vos Informations" */
+    bottom: 0;
+    left: 50%; /* Place la ligne au milieu des deux colonnes */
+    width: 1px;
+    height: 447px;
+    background: white;
+    content: "";
+  }
+  
+  .info-container .title-form {
+  margin: 53px 0 29px 0
+  }
+  
+  .label-command {
+    display: block;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 13px;
+    
+  }
+  
+  .info-container input {
+    width: 383px;
+    height: 71px;
+    border-radius: 7px;
+    background: #FFF;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.04);
+    border: none;
+    margin-bottom: 30px;
+  }
+
+ 
