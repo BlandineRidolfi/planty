@@ -32,14 +32,21 @@
 
     <div class="nav-bar">
 
+        <!-- Utilisation de la fonction wp_nav_menu pour générer le code HTML du menu de navigation dans WP-->    
+
         <nav id="menu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
             <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'link_before' => '<span itemprop="name">', 'link_after' => '</span>' ) ); ?>
+
+            <!--Hook permettant d'afficher un lien vers l'administration du site s'il est connecté-->
+            <!--Sinon rien ne se passe-->
+            
+
         </nav>
 
-        <?php if (is_user_logged_in() && current_user_can('administrator')) : ?>
-    <a href="<?php echo admin_url(); ?>" class="admin-link">Admin</a>
-<?php endif; ?>
-
+        <!-- Hook permettant d'afficher un lien vers l'administration du site s'il est connecté -->
+        <!-- Sinon rien ne se passe -->
+       
+        
 
     <!--BOUTON NAVIGATION-->
     

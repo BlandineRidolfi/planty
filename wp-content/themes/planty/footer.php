@@ -12,7 +12,7 @@
 </footer>
 
 </div>
-
+<!-- Implémentation du menu WP -->
 <?php wp_footer(); ?>
 </body>
 </html>
