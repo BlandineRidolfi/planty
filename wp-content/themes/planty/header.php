@@ -30,17 +30,23 @@
         </div>
     </div>
 
-    <div class=nav-bar>
+    <div class="nav-bar">
 
         <nav id="menu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
             <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'link_before' => '<span itemprop="name">', 'link_after' => '</span>' ) ); ?>
         </nav>
+
+        <?php if (is_user_logged_in() && current_user_can('administrator')) : ?>
+    <a href="<?php echo admin_url(); ?>" class="admin-link">Admin</a>
+<?php endif; ?>
+
 
     <!--BOUTON NAVIGATION-->
     
         <a href="http://localhost/commander/" class="link-button">
             <button id="nav-button" type="button">Commander</button>
         </a>
+    
     </div>
 </header>
 

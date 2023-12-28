@@ -26,7 +26,6 @@ nav a:hover {
     display: none;
 }
 
-
 .header {
     display: none;
 }
@@ -52,6 +51,8 @@ header {
     flex-direction: row;
 }
 
+/**Ajout du boutton commander indépendament du menu WP pour faciliter la mise en place du HOOK admin**/
+
 #nav-button {
     flex-direction: flex;
     align-items: center;
@@ -65,6 +66,16 @@ header {
     background-color: #C02E44;
     cursor: pointer;
 }
+
+/**Ajout du HOOK - Si admin connecté apparition du lien admin, sinon rien ne change **/
+
+.admin-link {
+    flex-direction: flex;
+    align-items: center;
+    justify-content: center; 
+    padding-right: 60px;
+    padding-top: 30px;
+  }
 
 /**FOOTER**/
 
@@ -160,25 +171,26 @@ textarea {
 .container-command {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Ajout pour centrer horizontalement */
-    text-align: center; /* Ajout pour centrer le texte horizontalement */
+    align-items: center; 
+    text-align: center; 
     width: 194px;   
     margin-bottom: 39px;
   }
 
   .textbox {
-    margin-top: 10px; /* Ajout pour espacer l'image et l'input */
+    margin-top: 10px; 
     
   }
 
   .textbox input {
-    width: 39px; /* Modification pour utiliser la largeur complète du conteneur parent */
+    width: 39px; 
     height: 56px;
     text-align: center;
     font-family: inter;
     font-size: 16px;
     font-weight: 400;
-    box-sizing: border-box; /* Ajout pour inclure la bordure et le padding dans la largeur */
+    box-sizing: border-box;
+    border: none; 
   }
 
   /* Partie formulaire*/
@@ -205,13 +217,12 @@ textarea {
   .info-container::before {
     content: "";
     position: absolute;
-    top: 53px; /* Ajustez cette valeur pour l'aligner avec le titre "Vos Informations" */
+    top: 57px;
     bottom: 0;
     left: 50%; /* Place la ligne au milieu des deux colonnes */
     width: 1px;
     height: 447px;
     background: white;
-    content: "";
   }
   
   .info-container .title-form {
@@ -237,4 +248,5 @@ textarea {
     margin-bottom: 30px;
   }
 
+  
  
