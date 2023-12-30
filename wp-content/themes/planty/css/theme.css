@@ -6,15 +6,25 @@ body * {
 
 /**HEADER**/
 
-nav {
+.menu {
     display: flex;
     flex-direction: row;
     gap: 60px;
-    align-items: center;
     padding-right: 60px;
-    font-size: 16px;
+    text-decoration: none;
+    font-style: normal;
+    color: #000;
+    font-family: Syne;font-size: 16px;
+    font-style: normal;
     font-weight: 400;
     line-height: normal;
+  }
+
+nav {
+    display: flex;
+    flex-direction: row;
+    padding-top: 31px;
+    padding-bottom: 30px;
 }
 
 nav a:hover {
@@ -69,13 +79,7 @@ header {
 
 /**Personnalisation du menu WP avec ajout du HOOK admin **/
 
-.menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-}
+
 
 
 /**FOOTER**/
@@ -250,4 +254,8 @@ textarea {
   }
 
   
- 
+ /** RESPONSIVE **/
+
+ @media screen {
+    
+ }
