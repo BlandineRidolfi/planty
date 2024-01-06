@@ -1,6 +1,3 @@
-
-
-
 <footer id="footer" role="contentinfo">
     <div id="politicy">
         <a href="http://localhost/" class="politicy-footer">

@@ -1,5 +1,5 @@
 <?php
-/** ACTIVATION DU THEME **/
+    /** ACTIVATION DU THEME **/
     add_action('wp_enqueue_scripts', 'theme_enqueue_style');
     function theme_enqueue_style()
     {

@@ -9,8 +9,19 @@ body {
     /* Pour coller le menu au bord, sans espace */
     margin: 0;
 }
-
+/**********/
 /**HEADER**/
+/**********/
+
+    /*Désactivation du header de base pour mieux gérer mon header*/
+
+.header {
+    display: none;
+}
+
+#site-title {
+    display: none;
+}
 
 .menu {
     display: flex;
@@ -45,14 +56,6 @@ nav a:hover {
     font-weight: 700;
 }
 
-#site-title {
-    display: none;
-}
-
-.header {
-    display: none;
-}
-
 header {
     background-color: white;
     width: auto;
@@ -74,9 +77,7 @@ header {
     flex-direction: row;
 }
 
-
-
-/**Ajout du boutton commander indépendamment du menu WP pour faciliter la mise en place du HOOK admin**/
+    /**Ajout du boutton commander indépendamment du menu WP pour faciliter la mise en place du HOOK admin**/
 
 #nav-button {
     width: 236px;
@@ -90,17 +91,13 @@ header {
     cursor: pointer;
 }
 
-/**FOOTER**/
+    /**Désactivation hors responsive du lien commander**/
 
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-    height: 60px;
-    padding: 20px 0 21px 0;
-    background-color: white;
+.link-command {
+    display: none;
 }
+
+    /**Préparation du menu hamburger pour le responsive**/
 
 #ch {
     display: none;
@@ -115,37 +112,46 @@ footer {
     cursor: pointer;
     }
 
-    .link-command {
-        display: none;
-    }
+/**********/
+/**FOOTER**/
+/**********/
 
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 60px;
+    padding: 20px 0 21px 0;
+    background-color: white;
+}
 
+/***********************************/
+/***********************************/
+/***********************************/
 /**RESPONSIVE DE LA PARTIE HEADER **/
-@media screen and (max-width: 810px) {
+/***********************************/
+/***********************************/
+/***********************************/
+
+@media screen and (min-width: 426px) and (max-width: 810px) {
+
+        /**Désactivation de la nav-bar version ordi**/
+
     .nav-bar {
         display: none;
     }
-    #logo {
-        width: auto;
-        height: 15px;
-        display: flex;
-        justify-content: flex-start;
-    }
+
+        /**Mise en place du style du logo responsive**/
+
     .link-logo {
         margin-top: 15px;
         padding-left: 0;
         padding-bottom: 12px;        
     }
 
-    
-    #menu-item-136, #menu-item-74 {
-        height: 40px;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 50px;
-    }
+        /**Mise en place du header général avec logo, hamburger et menu**/
+
     header {
         width: 100%;
         height: auto;
@@ -154,33 +160,179 @@ footer {
         min-height: 40px;
         max-height: 100px;
     }
-    #menu {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
-        padding: 0;
-    }
-    #menu-principal {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding-right: 0;
-        gap: inherit;
-        
-    }
+
+        /**Transition du menu déroulant lorsqu'on appuie sur le hamburger**/
+
     .nav-bar {
         display: flex;
         flex-direction: row;
         transform: translate(-1000px,0);
         transition:all 0.5s ease;
-        height: 60px;
-        
+        height: 60px;     
     }
+
+        /** Menu des trois liens **/
+
+    #menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0;
+    }
+
+        /** Partie englobant Admin et nous rencontrer **/
+
+    #menu-principal {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-right: 0;
+        gap: inherit;        
+    }
+
+        /** Ajout du style à nous rencontrer ET admin **/
+    
+    #menu-item-136, #menu-item-74 {
+        height: 40px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 50px;
+    } 
+
+    /** Désactivation du bouton commander pour le responsive **/
+
+    #nav-button {
+        display: none;
+    }
+
+    /** Disposition du lien commander **/
+
+    .link-command {
+        display: block;
+        text-align: center;
+    }  
+
+
+        /** Disposition du style hamburger **/
+
+    #lab {
+        min-height: 20px;
+        background: linear-gradient(#000 0%, #000 20%, transparent 21%, transparent 40%, #000 41%, #000 60%, transparent 61%, transparent 81%, #000 81%, #000 100%);
+        margin: 0;
+        display: block;
+        cursor: pointer;
+    }
+
+        /** Création de la checkbox pour l'effet hammburger **/
+
     #ch:checked+.nav-bar {
         transform: translate(0,0);
         transition:all 0.5s ease;
     }
+}
+
+@media screen and (max-width: 425px) {
+
+    /**************************************/
+    /** Ajustement de la police **********/
+    /************************************/
+
+        /** Ajustement de la police **/
+
+    .link-command {
+        display: block;
+        text-align: center;
+        font-size: 12px!important;
+    } 
+    
+    .hfe-menu-item {
+        font-size: 12px!important;
+    }
+
+    .elementor-kit-113 a  {
+        font-size: 12px!important;
+    }
+
+        /**Mise en place du style du logo responsive**/
+
+    .link-logo {
+        margin-top: 15px;
+        padding-left: 0;
+        padding-bottom: 12px;        
+    }
+
+        /**Mise en place du header général avec logo, hamburger et menu**/
+
+    header {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        min-height: 40px;
+        max-height: 100px;
+    }
+
+        /**Transition du menu déroulant lorsqu'on appuie sur le hamburger**/
+
+    .nav-bar {
+        display: flex;
+        flex-direction: row;
+        transform: translate(-1000px,0);
+        transition:all 0.5s ease;
+        height: 60px;     
+    }
+
+    /** Menu des trois liens **/
+
+    #menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0;
+    }
+
+        /** Partie englobant Admin et nous rencontrer **/
+
+    #menu-principal {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-right: 0;
+        gap: inherit;        
+    }
+    
+    /** Ajout du style à nous rencontrer ET admin **/
+    
+    #menu-item-136, #menu-item-74 {
+        height: 40px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 50px;
+    } 
+
+    /** Désactivation du bouton commander pour le responsive **/
+
+    #nav-button {
+        display: none;
+    }
+
+    /** Disposition du lien commander **/
+
+    .link-command {
+        display: block;
+        text-align: center;
+    }
+
+
+    #ch:checked+.nav-bar {
+        transform: translate(0,0);
+        transition:all 0.5s ease; 
+    }
+
     #lab{
        min-height: 20px;
         background: linear-gradient(#000 0%, #000 20%, transparent 21%, transparent 40%, #000 41%, #000 60%, transparent 61%, transparent 81%, #000 81%, #000 100%);
@@ -189,14 +341,22 @@ footer {
         cursor: pointer;
     }
 
-    #nav-button {
-        display: none;
-    }
+    /** Disposition du style hamburger **/
 
-    .link-command {
+    #lab {
+        min-height: 20px;
+        background: linear-gradient(#000 0%, #000 20%, transparent 21%, transparent 40%, #000 41%, #000 60%, transparent 61%, transparent 81%, #000 81%, #000 100%);
+        margin: 0;
         display: block;
-        text-align: center;
+        cursor: pointer;
     }
 
-   
+        /** Création de la checkbox pour l'effet hammburger **/
+
+    #ch:checked+.nav-bar {
+        transform: translate(0,0);
+        transition:all 0.5s ease;
+    }
 }
+
+    
