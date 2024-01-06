@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&family=Syne:wght@400;500;600;700;800&display=swap');
 
-body * {
+* {
     font-family: 'Syne';
+    box-sizing: border-box;
+}
+
+body {
+    /* Pour coller le menu au bord, sans espace */
+    margin: 0;
 }
 
 /**HEADER**/
@@ -14,11 +20,18 @@ body * {
     text-decoration: none;
     font-style: normal;
     color: #000;
-    font-family: Syne;font-size: 16px;
+    font-family: Syne;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-  }
+}
+
+#menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 
 nav {
     display: flex;
@@ -61,26 +74,21 @@ header {
     flex-direction: row;
 }
 
-/**Ajout du boutton commander indépendament du menu WP pour faciliter la mise en place du HOOK admin**/
+
+
+/**Ajout du boutton commander indépendamment du menu WP pour faciliter la mise en place du HOOK admin**/
 
 #nav-button {
-    flex-direction: flex;
-    align-items: center;
     width: 236px;
     height: 80px;
     border-radius: 0;
-    background-color: #DC9F96;   
+    background-color: #DC9F96;
 }
 
 #nav-button:hover {
     background-color: #C02E44;
     cursor: pointer;
 }
-
-/**Personnalisation du menu WP avec ajout du HOOK admin **/
-
-
-
 
 /**FOOTER**/
 
@@ -94,9 +102,101 @@ footer {
     background-color: white;
 }
 
-  
- /** RESPONSIVE **/
+#ch {
+    display: none;
+}
 
- @media screen {
+#lab {
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(#000 0%, #000 20%, transparent 21%, transparent 40%, #000 41%, #000 60%, transparent 61%, transparent 81%, #000 81%, #000 100%);
+    margin: 0;
+    display: none;
+    cursor: pointer;
+    }
+
+    .link-command {
+        display: none;
+    }
+
+
+/**RESPONSIVE DE LA PARTIE HEADER **/
+@media screen and (max-width: 810px) {
+    .nav-bar {
+        display: none;
+    }
+    #logo {
+        width: auto;
+        height: 15px;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .link-logo {
+        margin-top: 15px;
+        padding-left: 0;
+        padding-bottom: 12px;        
+    }
+
     
- }
+    #menu-item-136, #menu-item-74 {
+        height: 40px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 50px;
+    }
+    header {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        min-height: 40px;
+        max-height: 100px;
+    }
+    #menu {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        padding: 0;
+    }
+    #menu-principal {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-right: 0;
+        gap: inherit;
+        
+    }
+    .nav-bar {
+        display: flex;
+        flex-direction: row;
+        transform: translate(-1000px,0);
+        transition:all 0.5s ease;
+        height: 60px;
+        
+    }
+    #ch:checked+.nav-bar {
+        transform: translate(0,0);
+        transition:all 0.5s ease;
+    }
+    #lab{
+       min-height: 20px;
+        background: linear-gradient(#000 0%, #000 20%, transparent 21%, transparent 40%, #000 41%, #000 60%, transparent 61%, transparent 81%, #000 81%, #000 100%);
+        margin: 0;
+        display: block;
+        cursor: pointer;
+    }
+
+    #nav-button {
+        display: none;
+    }
+
+    .link-command {
+        display: block;
+        text-align: center;
+    }
+
+   
+}

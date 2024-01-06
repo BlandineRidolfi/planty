@@ -11,13 +11,14 @@
 
    // Fonction pour ajouter le lien admin à la liste des items de menu
    function add_admin_link($items, $args) {
-    if (is_user_logged_in() && $args->theme_location  == 'main-menu'){
-        $admin_item = '<li id="menu-item-74" itemprop="name" class="menu-item menu-item-type-custom menu-item-object-custom parent hfe-creative-menu"><a href="'. get_site_url() .'/wp-admin/"" itemprop="url" class="hfe-menu-item">Admin</a></li>';
-        $items.=$admin_item;
+    if (is_user_logged_in() && $args->theme_location == 'main-menu') {
+        $admin_item = '<li id="menu-item-74" itemprop="name" class="menu-item menu-item-type-custom menu-item-object-custom parent hfe-creative-menu"><a href="'. get_site_url() .'/wp-admin/" itemprop="url" class="hfe-menu-item">Admin</a></li>';
+        $items .= $admin_item;
     }
-      return $items;
-  }
-  add_filter( 'wp_nav_menu_items', 'add_admin_link', 10, 2 );
+    return $items;
+}
+add_filter('wp_nav_menu_items', 'add_admin_link', 10, 2);
+
 ?>
     
     

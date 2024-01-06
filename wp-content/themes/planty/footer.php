@@ -1,6 +1,4 @@
-</main>
-<?php get_sidebar(); ?>
-</div>
+
 
 
 <footer id="footer" role="contentinfo">
@@ -12,7 +10,8 @@
 </footer>
 
 </div>
-<!-- Implémentation du menu WP -->
+<!-- Implémentation du footer WP -->
 <?php wp_footer(); ?>
+
 </body>
 </html>
